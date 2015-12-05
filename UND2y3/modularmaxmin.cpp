@@ -5,8 +5,31 @@
 //
 
 
+
 #include <iostream>
 using namespace std;
+
+//Funciones
+
+void maxmin(int &maximo, int &minimo, int valor){
+
+	
+
+	if(valor>maximo){
+
+	maximo = valor;
+
+	}		
+	else if(valor<minimo){
+
+	minimo = valor;
+	
+	}
+
+
+}
+
+//Funcion Principal
 
 int main(){
 
@@ -15,8 +38,9 @@ int main(){
 
 		int numero = 0;
 		int i = 0;
-		int maximo = 5;
-		int minimo = 5;
+		int max = 5;
+		int min = 5;
+		
 
 		//1.Creamos un bucle for para que pida 100 números, nosotros haremos 10 para no tener que ecribir los 100.
 		// y comprobaremos si es mayor o menor y lo almacenaremos en las variables "maximo" o "minimo".
@@ -27,22 +51,12 @@ int main(){
 
 		cin >> numero;
 
-			if(numero>maximo){
-
-			maximo = numero;
-
-			}		
-			else if(numero<minimo){
-
-			minimo = numero;
-
-			}
-
+		maxmin(max, min, numero);
 
 		}
 
-		cout << "El número máximo es: " << maximo << endl;
-		cout << "El número mínimo es: " << minimo << endl;
+		cout << "El número máximo es: " << max << endl;
+		cout << "El número mínimo es: " << min << endl;
 
 
 } //Fin del Programa
